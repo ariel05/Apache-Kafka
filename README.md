@@ -23,11 +23,15 @@ cd kafka (kafka binario)
 
 ▶️ En Linux/Mac
 
-bin/zookeeper-server-start.sh config/zookeeper.properties
+- bin/zookeeper-server-start.sh
+
+- config/zookeeper.properties
 
 ▶️ En Windows (cmd)
 
-bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+- bin\windows\zookeeper-server-start.bat
+
+- config\zookeeper.properties
 
 ---
 
@@ -37,11 +41,13 @@ Abrir otra terminal, en la carpeta kafka/ de nuevo y ejecutar:
 
 ▶️ En Linux/Mac
 
-bin/kafka-server-start.sh config/server.properties
+- bin/kafka-server-start.sh
+- config/server.properties
 
 ▶️ En Windows (cmd)
 
-bin\windows\kafka-server-start.bat config\server.properties
+- bin\windows\kafka-server-start.bat
+- config\server.properties
 
 ---
 
