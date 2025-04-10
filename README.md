@@ -23,15 +23,11 @@ cd kafka (kafka binario)
 
 ▶️ En Linux/Mac
 
-- bin/zookeeper-server-start.sh
-
-- config/zookeeper.properties
+- bin/zookeeper-server-start.sh config/zookeeper.properties
 
 ▶️ En Windows (cmd)
 
-- bin\windows\zookeeper-server-start.bat
-
-- config\zookeeper.properties
+- bin\windows\zookeeper-server-start.bat config\zookeeper.properties
 
 ---
 
@@ -41,13 +37,11 @@ Abrir otra terminal, en la carpeta kafka/ de nuevo y ejecutar:
 
 ▶️ En Linux/Mac
 
-- bin/kafka-server-start.sh
-- config/server.properties
+- bin/kafka-server-start.sh config/server.properties
 
 ▶️ En Windows (cmd)
 
-- bin\windows\kafka-server-start.bat
-- config\server.properties
+- bin\windows\kafka-server-start.bat config\server.properties
 
 ---
 
@@ -64,3 +58,11 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ---
 
 ## Levantar primero Consumer y luego Producer
+
+---
+
+### Comandos importantes
+
+- netstat -ano | findstr :2181 (2181 es el puerto que usa zookeeper por defecto, esto lo revisa)
+- tasklist | findstr <PID> (Ver qué es lo que lo está usando) - No es comando linux
+- taskkill /PID <PID> /F (Matar proceso) - No es comando linux
