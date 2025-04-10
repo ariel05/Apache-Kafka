@@ -1,5 +1,6 @@
 package ar.com.apache_kafka.producer.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import ar.com.apache_kafka.producer.service.Producer;
 @RequestMapping("v1/api")
 public class MessageController {
 
+	@Autowired
 	private Producer kafkaProducer;
 	
 	@PostMapping("/messages")
