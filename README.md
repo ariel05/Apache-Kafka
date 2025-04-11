@@ -67,3 +67,4 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 - tasklist | findstr <PID> (Ver qué es lo que lo está usando) - No es comando linux
 - tasklist | findstr java
 - taskkill /PID <PID> /F (Matar proceso) - No es comando linux
+- wmic process where "name like '%java%'" get ProcessId,CommandLine (Lista los procesos java)
