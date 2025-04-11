@@ -17,11 +17,11 @@ public class Producer {
 
 	public void sendMessage(String topic, String message) {
 		kafkaTemplate.send(topic, message);
-		log.info("Mensaje enviado: {} en el topico {}", message, topic);
+		log.info("Mensaje genérico enviado: '{}' \n en el topico {}", message, topic);
 	}
 	
 	public void sendOrder(String topic, Pedido pedido) {
 		kafkaTemplate.send(topic, pedido);
-		log.info("Mensaje enviado: {} en el topico {}", pedido, topic);
+		log.info("Mensaje Pedido enviado: '{}' \n en el topico {}", pedido, topic);
 	}
 }

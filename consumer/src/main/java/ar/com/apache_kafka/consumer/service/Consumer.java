@@ -12,7 +12,6 @@ public class Consumer {
 	
 	@KafkaListener(topics = "test-topic", groupId = "my-group")
 	public void listener(String message) {
-		System.out.println("El mensaje es: " + message);
 		log.info("Mensaje escuchado {}", message);
 	}
 }
