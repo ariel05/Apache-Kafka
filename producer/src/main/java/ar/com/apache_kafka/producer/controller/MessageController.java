@@ -3,10 +3,12 @@ package ar.com.apache_kafka.producer.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import ar.com.apache_kafka.producer.modelo.Pedido;
 import ar.com.apache_kafka.producer.service.Producer;
 
 @RestController
@@ -21,5 +23,12 @@ public class MessageController {
 		kafkaProducer.sendMessage("test-topic", message);
 		
 		return ResponseEntity.ok("Mensaje Enviado: "+ message);
+	}
+	
+	@PostMapping("/order")
+	public ResponseEntity<String> sendOrder(@RequestBody Pedido pedido){
+		kafkaProducer.sendOrder("test-topic", pedido);
+		
+		return ResponseEntity.ok("Mensaje Enviado: "+ pedido);
 	}
 }
